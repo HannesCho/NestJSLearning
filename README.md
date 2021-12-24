@@ -71,3 +71,9 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+# What I study Here
+
+[x] Single-responsibility principle
+
+Every module, class or function should encapsulate (which means do one thing and do it well; responsible)
