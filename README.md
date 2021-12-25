@@ -128,3 +128,13 @@ response :
 ```
 
 [] Dependency injection
+
+[x] Unit Test
+Test function isolate from everything else.
+"Isolated" Unit Test from your service.
+
+[x] E2E Test
+end to end Test
+Test the all system.
+Something user can experience (e.g. click the link and go to that website)
+Note! we need to set up the same environment in our testing.(e.g. apply pipe in our test app.)
