@@ -77,3 +77,54 @@ Nest is [MIT licensed](LICENSE).
 [x] Single-responsibility principle
 
 Every module, class or function should encapsulate (which means do one thing and do it well; responsible)
+
+[x] options of ValidationPipe
+
+1. whitelist: true
+   if client send data is below,
+
+```
+  {
+    "title": "Tenet",
+    "year": 2020,
+    "genres": ["Action", "Sci-Fi"],
+    "hack": "by me"
+  }
+```
+
+whitelist: true => "hack" property will be not saved, because there is no decorator for "hack" property.
+
+response:
+
+```
+{
+ id: 1,
+ title: 'Tenet',
+ year: 2020,
+ genres: ['Action', 'Sci-Fi'],
+}
+```
+
+2. forbidNonWhitelisted: true
+   if client send data is below,
+
+```{
+ "title": "Tenet",
+ "year": 2020,
+ "genres": ["Action", "Sci-Fi"],
+ "hack": "by me"
+}
+```
+
+Throw HttpException, because "hack" is not in whitelist.
+
+response :
+
+```{
+ "statusCode": 400,
+ "message": [ "property hack should not exist" ],
+ "error": "Bad Request"
+}
+```
+
+[] Dependency injection
